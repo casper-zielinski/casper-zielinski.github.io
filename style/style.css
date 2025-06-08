@@ -1,3 +1,377 @@
 body{
-      background-color: aqua;
+      background: linear-gradient(to bottom right, rgb(29, 21, 115),rgb(9, 255, 0));
+      color: white;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      height: auto;
+      width: auto;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow-x: hidden;
+}
+
+header{
+      margin-top: -1em;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      margin-bottom: 5em;
+      padding: 2%;
+      background-color: transparent;      
+}
+
+#Person-Container{
+      top: 0;
+      position: fixed;      
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      background: linear-gradient(to bottom right, rgb(29,21,150), rgb(1,1,1));
+      padding: 2% 2% 2% 2%;
+      z-index: 2;
+      border-radius: 0 0 100% 100%;
+}
+
+#Person{
+      font-size: 230%;
+      z-index: inherit
+}
+
+#Person-Container:hover{
+      background: linear-gradient(to right, rgb(1,1,1) , rgb(29,21,150))
+}
+
+h3{
+      font-size: 20px;
+      font-weight: bolder;
+}
+
+main{
+      flex-wrap: wrap;
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      margin: 1em;
+      font-size: large;
+      background: linear-gradient(to bottom right, rgb(1,1,1), rgb(29,21,150));
+      padding: 2%;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      /* animation-name: slideInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-in; */
+}
+
+.slideinLeft {
+      animation: slideInLeft 1s linear;
+}
+
+.slideinRight {
+      animation: slideInRight 1s linear;
+}
+
+.slideFromBottomAndBounce{
+      animation: slidefromBottom 1.4s ease-out forwards, bounce 3s ease 1.4s forwards;
+}
+
+.slideFromTop{
+      animation: slidefromTop 1.4s linear;
+}
+
+
+/* key frame animations declared like slide and bounce*/
+@keyframes slideInLeft{
+      from{
+            transform: translateX(-2000px);
+      }
+
+      to {
+            transform: translateX(0);
+      }
+}
+
+@keyframes slideInRight{
+      from{
+            transform: translateX(2000px);
+      }
+
+      to {
+            transform: translateX(0);
+      }
+}
+
+@keyframes slidefromBottom{
+      from{
+            transform: translateY(600px);
+      }
+      to{
+            transform: translate(0);
+      }
+}
+
+@keyframes slidefromTop{
+      from{
+            transform: translateY(-600px);
+      }
+      to{
+            transform: translate(0);
+      }
+}
+
+@keyframes bounce{ 
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(-40px); }
+  20%  { transform: translateY(0); }
+  30%  { transform: translateY(-30px); }
+  40%  { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  60%  { transform: translateY(0); }
+  70%  { transform: translateY(-10px); }
+  80%  { transform: translateY(0); }
+  90%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+main:hover{
+      transform: translate(-6px, -10px) scale(1.009);
+      background: linear-gradient(to left, rgb(1,1,1), rgb(29,21,150));
+}
+
+article{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 1em;
+      font-size: large;
+      background: linear-gradient(to bottom right, rgb(29,21,150), rgb(1,1,1));      border-radius: 20px;
+      padding: 3%;
+      text-align: center;
+      justify-content: space-around;
+
+      /* transition-property: transform;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+      transition-delay: 0s; */
+      transition: all 0.3s ease-in-out;
+}
+
+article:hover {
+      transform: translate(-6px, -10px) scale(1.009);
+      background: linear-gradient(to left, rgb(29,21,150), rgb(1,1,1));      border-radius: 20px;
+}
+
+#Programmierung{
+      display: flex;
+      gap: 2em;
+}
+
+#Web-Basiert{
+      border-radius: 20px;
+      background: linear-gradient(to bottom right, rgb(29, 21, 115),rgb(4, 110, 0));
+      padding: 1%;
+      flex-wrap: wrap;
+      transition: all 0.3s ease-in-out;
+}
+
+#Web-Basiert:hover{
+      transform: translate(-6px, -10px) scale(1.04);
+      background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+}
+
+#Programmierungs-Basiert{
+      border-radius: 20px;
+      background: linear-gradient(to bottom right,rgb(4, 110, 0), rgb(29, 21, 115));
+      padding: 1%;
+      flex-wrap: wrap;
+      transition: all 0.3s ease-in-out;
+}
+
+#Programmierungs-Basiert:hover{
+      transform: translate(-6px, -10px) scale(1.04);
+      background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
+}
+
+#Datenbank-Basiert{
+      border-radius: 20px;
+      background: linear-gradient(to bottom right, rgb(29, 21, 115),rgb(4, 110, 0));
+      padding: 1%;
+      flex-wrap: wrap;
+      transition: all 0.3s ease-in-out;
+}
+
+#Datenbank-Basiert:hover{
+      transform: translate(-6px, -10px) scale(1.04);
+      background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+}
+
+footer{
+     display: flex;
+     text-align: center;
+     font-size: large;
+     align-items: flex-end;
+     justify-content: flex-start;
+     margin-top: 7em;
+     padding: 2%;
+}
+
+@media (max-width: 750px){
+
+header{
+      margin-bottom: 2em;
+}
+
+article{
+            font-size: 10px;
+            padding: 4%;
+      }
+#Person{
+      font-size: 160%;
+}
+}
+
+@media (max-width: 600px)
+{
+      header{
+            margin-bottom: 1em;
+      }
+
+      main{
+            font-size: 10px;
+            padding: 4%;
+      }
+
+      #Person{
+            font-size: 100%;
+      }
+
+      footer{
+            font-size: 10px;
+      }
+
+      article{
+            font-size: 10px;
+            padding: 4%;
+      }
+
+      #Web-Basiert{
+            padding: 4%;
+      }
+
+      #Programmierungs-Basiert{
+            padding: 4%;
+      }
+
+      #Datenbank-Basiert{
+            padding: 4%;
+      }
+      
+      article:hover{
+            transform: translate(-6px, -10px) scale(1.01);
+      }
+
+      #Web-Basiert:hover{
+            transform: translate(-6px, -10px) scale(1.01);
+            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+      }
+
+      #Programmierungs-Basiert:hover{
+            transform: translate(-6px, -10px) scale(1.01);
+            background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
+      }
+
+      #Datenbank-Basiert:hover{
+            transform: translate(-6px, -10px) scale(1.01);
+            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+      }
+
+
+}
+
+@media (max-width: 520px)
+{
+      
+      header{
+            margin-bottom: 0.6em;
+      }
+
+      article
+      {
+            font-size: 7px;
+      }
+
+      #Web-Basiert
+      {
+            padding: 3%;
+      }
+
+      #Programmierungs-Basiert
+      {
+            padding: 3%;
+      }
+
+      #Datenbank-Basiert
+      {
+            padding: 3%;
+      }
+
+      #Web-Basiert:hover{
+            transform: translate(-4px, -8px) scale(1.01);
+            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+      }
+
+      #Programmierungs-Basiert:hover{
+            transform: translate(-4px, -8px) scale(1.01);
+            background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
+      }
+
+      #Datenbank-Basiert:hover{
+            transform: translate(-4px, -8px) scale(1.01);
+            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+      }
+}
+
+@media (max-width: 350px)
+{
+      
+      header{
+            margin-bottom: -0.5em;
+      }
+
+      #Person{
+            font-size: 60%;
+      }
+      #Web-Basiert, #Programmierungs-Basiert, #Datenbank-Basiert
+      {
+            padding: 2.6%;
+            font-size: 7px;
+      }
+
+      article{
+            padding: 3%;
+      }
+
+      #Programmierung{
+            gap: 8px;
+      }
+
+      #Web-Basiert:hover{
+            transform: translate(-2px, -4px) scale(1.001);
+            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+      }
+
+      #Programmierungs-Basiert:hover{
+            transform: translate(-2px, -4px) scale(1.001);
+            background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
+      }
+
+      #Datenbank-Basiert:hover{
+            transform: translate(-2px, -4px) scale(1.001);
+            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+      }
 }
