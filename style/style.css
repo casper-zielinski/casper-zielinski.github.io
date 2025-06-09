@@ -1,5 +1,5 @@
 body{
-      background: linear-gradient(to bottom right, rgb(29, 21, 115),rgb(9, 255, 0));
+      background: linear-gradient(to bottom right, rgb(4, 4, 4),#0b0b0b,rgb(12, 12, 12),rgb(0, 30, 0));
       color: white;
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       height: auto;
@@ -30,7 +30,10 @@ header{
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      background: linear-gradient(to bottom right, rgb(29,21,150), rgb(1,1,1));
+      background: linear-gradient(to bottom right, rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 20, 10));
+      border-bottom: 0.2em solid rgb(0, 112, 28);
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0ff;
       padding: 2% 2% 2% 2%;
       z-index: 2;
       border-radius: 0 0 100% 100%;
@@ -42,7 +45,9 @@ header{
 }
 
 #Person-Container:hover{
-      background: linear-gradient(to right, rgb(1,1,1) , rgb(29,21,150))
+      background: linear-gradient(to right, rgb(1,1,1),#000 , rgb(5, 45, 0));
+      box-shadow: 0 0 20px #0f0,
+      0 0 30px #0ff;
 }
 
 h3{
@@ -57,7 +62,7 @@ main{
       justify-content: center;
       margin: 1em;
       font-size: large;
-      background: linear-gradient(to bottom right, rgb(1,1,1), rgb(29,21,150));
+      background: linear-gradient(to bottom right, rgb(1,1,1), rgb(3, 3, 3), rgb(6, 8, 8));
       padding: 2%;
       border-radius: 20px;
       text-align: center;
@@ -66,6 +71,8 @@ main{
       /* animation-name: slideInLeft;
       animation-duration: 1s;
       animation-timing-function: ease-in; */
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0ff;
 }
 
 .slideinLeft {
@@ -141,6 +148,45 @@ main{
 main:hover{
       transform: translate(-6px, -10px) scale(1.009);
       background: linear-gradient(to left, rgb(1,1,1), rgb(29,21,150));
+      box-shadow:
+      0 0 5px #0f0,
+      0 0 7px #0ff,
+      0 0 12px #0ff,
+      0 0 20px #0ff,
+      0 0 40px #0f0;
+}
+
+
+#Borg{
+      display: flex;
+      justify-content: center;
+}
+
+#School-Picture
+{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: -2em;
+}
+
+#School-Text-Container
+{
+      padding: 2%;
+      background: linear-gradient(to bottom right, rgb(1,1,1), rgb(3, 3, 3), rgb(6, 8, 8));
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0ff;
+      margin-bottom: 3rem;
+
+}
+
+#School-Text
+{
+      text-align: center;
+      padding: 2%;
+      display: flex;
+      align-items: flex-end;
+     
 }
 
 article{
@@ -149,7 +195,8 @@ article{
       flex-wrap: wrap;
       margin: 1em;
       font-size: large;
-      background: linear-gradient(to bottom right, rgb(29,21,150), rgb(1,1,1));      border-radius: 20px;
+      background: linear-gradient(to bottom right, rgb(1,1,1), rgb(3, 3, 3), rgb(6, 8, 8));
+      border-radius: 20px;
       padding: 3%;
       text-align: center;
       justify-content: space-around;
@@ -159,11 +206,19 @@ article{
       transition-timing-function: ease;
       transition-delay: 0s; */
       transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0ff;
 }
 
 article:hover {
       transform: translate(-6px, -10px) scale(1.009);
-      background: linear-gradient(to left, rgb(29,21,150), rgb(1,1,1));      border-radius: 20px;
+      background: linear-gradient(to left, rgb(29,21,150), rgb(1,1,1));   
+      box-shadow: 0 0 10px #0f0,
+      0 0 10px #00f,
+      0 0 20px #0f0,
+      0 0 30px #0ff,
+      0 0 15px #0ff;
+
 }
 
 #Programmierung{
@@ -173,41 +228,62 @@ article:hover {
 
 #Web-Basiert{
       border-radius: 20px;
-      background: linear-gradient(to bottom right, rgb(29, 21, 115),rgb(4, 110, 0));
+      background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(36, 36, 36), rgb(24, 25, 56));
       padding: 1%;
       flex-wrap: wrap;
       transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0ff;
 }
 
 #Web-Basiert:hover{
       transform: translate(-6px, -10px) scale(1.04);
       background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+      box-shadow: 0 0 10px #0f0,
+      0 0 10px #00f,
+      0 0 20px #0f0,
+      0 0 30px #0ff,
+      0 0 15px #0ff;
 }
 
 #Programmierungs-Basiert{
       border-radius: 20px;
-      background: linear-gradient(to bottom right,rgb(4, 110, 0), rgb(29, 21, 115));
+      background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(36, 36, 36), rgb(24, 25, 56));
       padding: 1%;
       flex-wrap: wrap;
       transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0ff;
 }
 
 #Programmierungs-Basiert:hover{
       transform: translate(-6px, -10px) scale(1.04);
       background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
+            box-shadow: 0 0 10px #0f0,
+      0 0 10px #00f,
+      0 0 20px #0f0,
+      0 0 30px #0ff,
+      0 0 15px #0ff;
 }
 
 #Datenbank-Basiert{
       border-radius: 20px;
-      background: linear-gradient(to bottom right, rgb(29, 21, 115),rgb(4, 110, 0));
+      background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(36, 36, 36), rgb(24, 25, 56));
       padding: 1%;
       flex-wrap: wrap;
       transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0ff;
 }
 
 #Datenbank-Basiert:hover{
       transform: translate(-6px, -10px) scale(1.04);
       background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+            box-shadow: 0 0 10px #0f0,
+      0 0 10px #00f,
+      0 0 20px #0f0,
+      0 0 30px #0ff,
+      0 0 15px #0ff;
 }
 
 footer{
