@@ -40,7 +40,7 @@ header{
 }
 
 #Person{
-      font-size: 230%;
+      font-size: 150%;
       z-index: inherit
 }
 
@@ -160,33 +160,94 @@ main:hover{
 #Borg{
       display: flex;
       justify-content: center;
+      background-color: #000;
+      margin-bottom: 1em;
+      margin-top: 0.5em;
+      border-radius: 20px;
+      transform: scaleX(0.95);
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0f0;
+      flex-direction: column;
 }
 
 #School-Picture
 {
       display: flex;
-      align-items: flex-start;
       justify-content: center;
-      margin-bottom: -2em;
+      margin-bottom: -4.5em;
 }
 
 #School-Text-Container
 {
-      padding: 2%;
+      position: relative;
       background: linear-gradient(to bottom right, rgb(1,1,1), rgb(3, 3, 3), rgb(6, 8, 8));
       box-shadow: 0 0 10px #0f0,
       0 0 15px #0ff;
       margin-bottom: 3rem;
-
+      padding: 2%;
+      display: inline;
+      width: 50%;
+      border-radius: 20px;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
 }
 
 #School-Text
 {
       text-align: center;
-      padding: 2%;
+}
+
+#Borg-Experience-img{
       display: flex;
-      align-items: flex-end;
-     
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+}
+
+#Borg-Experience-img-CSharp{
+      width: 70%;
+      height: 70%;
+      z-index: 3;
+      transform: translateX(10%);
+
+}
+
+#CSharp{
+      width: 50%;
+      height: 50%;
+}
+
+#Borg-Experience-img-Web{
+      width: 40%;
+      height: 40%;
+      z-index: 3;
+      transform: translateX(10%);
+}
+
+#Web{
+      width: 50%;
+      height: 50%;
+}
+
+#Borg-Experience{
+      display: flex;
+      text-align: justify;
+      gap: 20px;
+      justify-content: space-between;
+      padding: 2%;
+      background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(36, 36, 36), rgb(24, 25, 56));
+      margin: 0;
+}
+
+#Web-Technick-Borg
+{
+      display: flex;
+}
+
+#ProgrammierTechnick-Borg
+{
+      display: flex;
 }
 
 article{
@@ -259,7 +320,7 @@ article:hover {
 #Programmierungs-Basiert:hover{
       transform: translate(-6px, -10px) scale(1.04);
       background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
-            box-shadow: 0 0 10px #0f0,
+      box-shadow: 0 0 10px #0f0,
       0 0 10px #00f,
       0 0 20px #0f0,
       0 0 30px #0ff,
@@ -298,14 +359,21 @@ footer{
 
 @media (max-width: 750px){
 
+#Programmierung{
+      flex-direction: column;
+      font-size: large;
+      text-align: justify;
+      gap: 1em;
+}
+
 header{
       margin-bottom: 2em;
 }
 
 article{
-            font-size: 10px;
-            padding: 4%;
+            padding: 3%;
       }
+
 #Person{
       font-size: 160%;
 }
@@ -313,12 +381,13 @@ article{
 
 @media (max-width: 600px)
 {
+
       header{
             margin-bottom: 1em;
       }
 
       main{
-            font-size: 10px;
+            font-size: large;
             padding: 4%;
       }
 
@@ -331,8 +400,9 @@ article{
       }
 
       article{
-            font-size: 10px;
+            font-size: medium;
             padding: 4%;
+            flex-direction: column;
       }
 
       #Web-Basiert{
@@ -371,14 +441,27 @@ article{
 
 @media (max-width: 520px)
 {
+      #Borg-Experience-img{
+            transform: scale(0.03);
+            transform: translateX(10%);
+      }
+
+      #CSharp{
+            transform: translateX(-10%);
+      }
       
       header{
             margin-bottom: 0.6em;
       }
 
+      main{
+            font-size: medium;
+      }
+
       article
       {
-            font-size: 7px;
+            padding: 3%;	
+            font-size: 30px;
       }
 
       #Web-Basiert
@@ -414,26 +497,26 @@ article{
 
 @media (max-width: 350px)
 {
-      
       header{
             margin-bottom: -0.5em;
       }
 
       #Person{
-            font-size: 60%;
+            font-size: 90%;
       }
+
       #Web-Basiert, #Programmierungs-Basiert, #Datenbank-Basiert
       {
-            padding: 2.6%;
-            font-size: 7px;
+            padding: 3.6%;
+            font-size: medium;
       }
 
       article{
-            padding: 3%;
+            padding: 6%;
       }
 
       #Programmierung{
-            gap: 8px;
+            gap: 16px;
       }
 
       #Web-Basiert:hover{
