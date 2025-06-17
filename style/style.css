@@ -1,5 +1,7 @@
+/* For whole content */
+
 body{
-      background: linear-gradient(to bottom right, rgb(4, 4, 4),#0b0b0b,rgb(12, 12, 12),rgb(0, 30, 0));
+      background: linear-gradient(to bottom right, var(--color-top),#0b0b0b,rgb(12, 12, 12),var(--color-bottom));
       color: white;
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       height: auto;
@@ -8,10 +10,40 @@ body{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      flex-wrap: wrap;
       overflow-x: hidden;
+      animation: colorchanger 3s linear infinite;
 }
 
+@property --color-top{
+      initial-value: rgb(4, 4, 4);
+      syntax: '<color>';
+      inherits: true;
+}
+
+@property --color-bottom{
+      initial-value: rgb(0, 41, 0);
+      syntax: '<color>';
+      inherits: true;
+}
+
+@keyframes colorchanger {
+      0%{
+            --color-top: rgb(4, 4, 4);
+            --color-bottom: rgb(0, 41, 0);
+      }
+      50%{
+            --color-top: rgb(25, 41, 56);
+            --color-bottom: rgb(0, 83, 0);
+
+      }
+      100%{
+            --color-top: rgb(4, 4, 4);
+            --color-bottom: rgb(0, 41, 0);
+      }
+      
+}
+
+/* header */
 header{
       margin-top: -1em;
       flex: 1;
@@ -51,14 +83,13 @@ header{
       0 0 30px #0ff;
 }
 
-#Person-Container:hover #White-Line{
-      animation: glance 5s ease-in-out infinite;
-}
-
+/*  For all h3 tags */
 h3{
       font-size: clamp(1rem, 2vw, 2.5rem);
       font-weight: bolder;
 }
+
+/* general Inforamtion*/
 
 main{
       flex-wrap: wrap;
@@ -66,15 +97,11 @@ main{
       justify-content: center;
       margin: 1em;
       font-size: large;
-      background: linear-gradient(to bottom right, rgb(1,1,1), rgb(3, 3, 3), rgb(6, 8, 8));
+      background-color: #0f140d;
       padding: 2%;
       border-radius: 20px;
       text-align: justify;
       transition: all 0.3s ease-in-out;
-      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-      /* animation-name: slideInLeft;
-      animation-duration: 1s;
-      animation-timing-function: ease-in; */
       box-shadow: 0 0 10px #0f0,
       0 0 15px #0ff;
 }
@@ -90,11 +117,11 @@ main:hover{
       0 0 40px #0f0;
 }
 
-
+/* Borg related*/
 #Borg{
       display: flex;
       justify-content: center;
-      background-color: #000;
+      background-color: #0f140d;
       margin-bottom: 1em;
       margin-top: 0.5em;
       border-radius: 20px;
@@ -103,6 +130,8 @@ main:hover{
       0 0 15px #0f0;
       flex-direction: column;
       transition: all 0.3s ease-in-out;
+      padding-top: -1em;
+      font-size: larger;
 }
 
 #Borg:hover{
@@ -113,7 +142,6 @@ main:hover{
       0 0 20px #0f0,
       0 0 30px #0ff,
       0 0 15px #0ff;
-      
 }
 
 #Borg:hover #School-Picture{
@@ -124,7 +152,7 @@ main:hover{
 {
       display: flex;
       justify-content: center;
-      margin-bottom: -5.5em;
+      margin-bottom: -4.5em;
       width: 100%;
       height: 100%;
       transform: scale(0.8);
@@ -219,10 +247,9 @@ main:hover{
 {
       position: relative;
       display: flex;
-      background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(36, 36, 36), rgb(24, 25, 56));
+      background: linear-gradient(to bottom right, rgb(49, 49, 49), rgb(53, 53, 53), rgb(24, 25, 56));
       padding: min(3%, 1em);
       border-radius: 20px;
-      transition: all 0.3s ease-in-out;
 }
 
 @property --angle {
@@ -231,23 +258,22 @@ main:hover{
       inherits: true;
 }
 
-#Neon-Glow::after, .Neon-Glow::before 
+.Neon-Glow::after, .Neon-Glow::before 
 {
       content: '';
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image: conic-gradient(from var(--angle),transparent 70%,#0f0);
+      background-image: conic-gradient(from var(--angle), transparent 50%, #0f0, #0ff);
       top: 50%;
       left: 50%;
       translate: -50% -50%;
-      z-index: -1;
+      z-index: -99;
       padding: 0.25rem;
       border-radius: 20px;
       animation: 3s spin linear infinite;
-      
 }
-#Neon-Glow::before {
+.Neon-Glow::before {
       filter: blur(2.5rem);
       opacity: 0.5;
 }
@@ -257,35 +283,19 @@ main:hover{
       100% { --angle: 360deg; }
 }
 
-
-.Neon-Glow:hover
-{
-      z-index: 1;
-      transform: translate(-6px, -10px) scale(1.02);
-      background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
-      box-shadow: 0 0 10px #0f0,
-      0 0 10px #00f,
-      0 0 20px #0f0,
-      0 0 30px #0ff,
-      0 0 15px #0ff;
-}
+/* FH-JOANNEUM related*/
 
 article{
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       margin: 1em;
-      font-size: large;
-      background: linear-gradient(to bottom right, rgb(1,1,1), rgb(3, 3, 3), rgb(6, 8, 8));
+      font-size: larger;
+      background-color: #0f140d;
       border-radius: 20px;
       padding: 3%;
       text-align: center;
       justify-content: space-around;
-
-      /* transition-property: transform;
-      transition-duration: 0.3s;
-      transition-timing-function: ease;
-      transition-delay: 0s; */
       transition: all 0.3s ease-in-out;
       box-shadow: 0 0 10px #0f0,
       0 0 15px #0ff;
@@ -299,13 +309,44 @@ article:hover {
       0 0 20px #0f0,
       0 0 30px #0ff,
       0 0 15px #0ff;
+}
 
+#FH-Picture{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: -3.5em; 
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+}
+
+#FH-Logo{
+      width: 20%;
+      height: 20%;
+}
+
+#FH-Text-Container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: linear-gradient(to bottom right, rgb(1,1,1), rgb(3, 3, 3), rgb(6, 8, 8));
+      box-shadow: 0 0 10px #0f0,
+      0 0 15px #0ff,
+      0 0 20px #0f0;
+      margin-bottom: 2.5rem;
+      padding: 1%;
+      border-radius: 20px;
+      width: 50%;
+      left: 50%;
+      transform: translateX(50%);
+      text-align: center;
 }
 
 #Programmierung{
       display: flex;
       gap: 2em;
-      animation: bounce 2s ;
+      animation: bounce 2s;
 }
 
 @keyframes bounce{ 
@@ -322,64 +363,13 @@ article:hover {
   100% { transform: translateY(0); }
 }
 
-#Web-Basiert{
+#Datenbank-Basiert, #Programmierungs-Basiert, #Web-Basiert {
+      position: relative;
       border-radius: 20px;
-      background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(36, 36, 36), rgb(24, 25, 56));
+      background: linear-gradient(to bottom right, rgb(49, 49, 49), rgb(53, 53, 53), rgb(24, 25, 56));
       padding: 1%;
       flex-wrap: wrap;
       transition: all 0.3s ease-in-out;
-      box-shadow: 0 0 10px #0f0,
-      0 0 15px #0ff;
-}
-
-#Web-Basiert:hover{
-      transform: translate(-6px, -10px) scale(1.04);
-      background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
-      box-shadow: 0 0 10px #0f0,
-      0 0 10px #00f,
-      0 0 20px #0f0,
-      0 0 30px #0ff,
-      0 0 15px #0ff;
-}
-
-#Programmierungs-Basiert{
-      border-radius: 20px;
-      background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(36, 36, 36), rgb(24, 25, 56));
-      padding: 1%;
-      flex-wrap: wrap;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 0 10px #0f0,
-      0 0 15px #0ff;
-}
-
-#Programmierungs-Basiert:hover{
-      transform: translate(-6px, -10px) scale(1.04);
-      background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
-      box-shadow: 0 0 10px #0f0,
-      0 0 10px #00f,
-      0 0 20px #0f0,
-      0 0 30px #0ff,
-      0 0 15px #0ff;
-}
-
-#Datenbank-Basiert{
-      border-radius: 20px;
-      background: linear-gradient(to bottom right, rgb(23, 23, 23), rgb(36, 36, 36), rgb(24, 25, 56));
-      padding: 1%;
-      flex-wrap: wrap;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 0 10px #0f0,
-      0 0 15px #0ff;
-}
-
-#Datenbank-Basiert:hover{
-      transform: translate(-6px, -10px) scale(1.04);
-      background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
-            box-shadow: 0 0 10px #0f0,
-      0 0 10px #00f,
-      0 0 20px #0f0,
-      0 0 30px #0ff,
-      0 0 15px #0ff;
 }
 
 footer{
@@ -390,6 +380,27 @@ footer{
      justify-content: flex-start;
      margin-top: 7em;
      padding: 2%;
+}
+
+/* media queries*/
+
+@media (min-width: 1200px) {
+      
+      #CSharp, #Web{
+            transform: scale(0.6) translateY(30%);
+      }
+
+      #FH-Picture{
+            transform: scale(0.7);
+            margin-bottom: -6vw;
+      }
+}
+
+@media (min-width: 900px) and (max-width: 1300px)
+{
+      #FH-Picture{
+            margin-bottom: clamp(-2.75rem, -3vh, -4rem);
+      }
 }
 
 @media (max-width: 750px){
@@ -413,7 +424,7 @@ article{
       font-size: 160%;
 }
 }
-
+/* Smart Phone */
 @media (max-width: 600px)
 {
 
@@ -426,6 +437,10 @@ article{
             padding: 4%;
             text-align: center;
 
+      }
+
+      #Borg{
+            font-size: medium;
       }
 
       #Person{
@@ -460,22 +475,19 @@ article{
             transform: translate(-6px, -10px) scale(1.01);
       }
 
-      #Web-Basiert:hover{
-            transform: translate(-6px, -10px) scale(1.01);
-            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
+}
+
+@media (min-width: 520px) and (max-width: 900px)
+{
+     #Web-Basiert, #Programmierungs-Basiert, #Datenbank-Basiert
+      {
+            padding: 3%;
+            text-align: center;
       }
 
-      #Programmierungs-Basiert:hover{
-            transform: translate(-6px, -10px) scale(1.01);
-            background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
+      #FH-Picture{
+            margin-bottom: clamp(-30px, -2.5vh, -40px);
       }
-
-      #Datenbank-Basiert:hover{
-            transform: translate(-6px, -10px) scale(1.01);
-            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
-      }
-
-
 }
 
 @media (max-width: 520px)
@@ -488,15 +500,21 @@ article{
             font-size: medium;
       }
 
-      article
-      {
-            padding: 5.4%;	
-            font-size: 30px;
-      }
-
       #Borg-Experience-img-Web{
             transform: translate(2%, 32%);
       }
+
+      article
+      {
+            padding: 5.4%;	
+            font-size: min(0.2em, 3vw);
+      }
+
+      article:hover{
+            transform: scale(1.015);
+      }
+
+     
 
       #Web-Basiert, #Programmierungs-Basiert, #Datenbank-Basiert
       {
@@ -504,22 +522,9 @@ article{
             text-align: center;
       }
 
-      #Web-Basiert:hover{
-            transform: translate(-4px, -8px) scale(1.01);
-            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
-      }
-
-      #Programmierungs-Basiert:hover{
-            transform: translate(-4px, -8px) scale(1.01);
-            background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
-      }
-
-      #Datenbank-Basiert:hover{
-            transform: translate(-4px, -8px) scale(1.01);
-            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
-      }
 }
 
+/* Small Smart Phone */
 @media (max-width: 350px)
 {
       header{
@@ -543,26 +548,12 @@ article{
       }
 
       article{
-            padding: 0% 3%;
+            padding: 0% 3% 3% 4%;
       }
 
       #Programmierung{
             gap: 16px;
-            padding: 0% 3%;
+            padding:0% 3% 3% 4%;
       }
 
-      #Web-Basiert:hover{
-            transform: translate(-2px, -4px) scale(1.001);
-            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
-      }
-
-      #Programmierungs-Basiert:hover{
-            transform: translate(-2px, -4px) scale(1.001);
-            background: linear-gradient(to left,rgb(4, 110, 0), rgb(29, 21, 115));
-      }
-
-      #Datenbank-Basiert:hover{
-            transform: translate(-2px, -4px) scale(1.001);
-            background: linear-gradient(to left, rgb(29, 21, 115),rgb(4, 110, 0));
-      }
 }
