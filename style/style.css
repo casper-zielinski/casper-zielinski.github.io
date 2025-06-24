@@ -1,7 +1,7 @@
 /* For whole content */
 
 body{
-      background: linear-gradient(to bottom right, var(--color-top),#0b0b0b,rgb(12, 12, 12),var(--color-bottom));
+      background: linear-gradient(to bottom, rgb(1, 2, 11), rgb(5, 8, 28), rgb(13, 15, 13) );
       color: white;
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       height: auto;
@@ -11,37 +11,9 @@ body{
       flex-direction: column;
       justify-content: center;
       overflow-x: hidden;
-      animation: colorchanger 3s linear infinite;
+
 }
 
-@property --color-top{
-      initial-value: rgb(4, 4, 4);
-      syntax: '<color>';
-      inherits: true;
-}
-
-@property --color-bottom{
-      initial-value: rgb(0, 41, 0);
-      syntax: '<color>';
-      inherits: true;
-}
-
-@keyframes colorchanger {
-      0%{
-            --color-top: rgb(4, 4, 4);
-            --color-bottom: rgb(0, 41, 0);
-      }
-      50%{
-            --color-top: rgb(25, 41, 56);
-            --color-bottom: rgb(0, 83, 0);
-
-      }
-      100%{
-            --color-top: rgb(4, 4, 4);
-            --color-bottom: rgb(0, 41, 0);
-      }
-      
-}
 
 /* header */
 header{
@@ -178,64 +150,34 @@ main:hover{
       transition: all 0.3s ease-in-out;
 }
 
-#School-Text-Container:hover
-{
-      transform: scale(1.02)  translate(-51%, -1%);
-      background: linear-gradient(to left, rgb(29,21,150), rgb(1,1,1));
-      box-shadow: 0 0 10px #0f0,
-      0 0 10px #00f,
-      0 0 20px #0f0,
-      0 0 30px #0ff,
-      0 0 15px #0ff;
-}
-
 #School-Text
 {
       text-align: center;
 }
 
-#Borg-Experience-img{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-end;
-}
-
 #Borg-Experience-img-CSharp{
-      width: 70%;
-      height: 70%;
-      z-index: 3;
-      transform: translate(20%, 30%);
-      filter: drop-shadow(0 0 15px rgb(99, 78, 133));
-      transition: all 0.3s ease-in-out;
-}
-
-#Borg-Experience-img-CSharp:hover{
-      filter: drop-shadow(0 0 15px rgb(194, 149, 210));
-      transform: scale(1.05) translate(19%, 24%);
-}
-
-#CSharp, #Web{
+      display: flex;
+      justify-content: center;
       width: 50%;
       height: 50%;
+      translate: 50% -5%;
 }
 
 #Borg-Experience-img-Web{
-      width: 40%;
-      height: 40%;
-      z-index: 3;
-      transform: translate(10%, 32%);
-      filter: drop-shadow(0 0 15px rgb(78, 133, 99));
-      transition: all 0.3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      height: 50%;
+      translate: 50% -5%;
 }
 
-#Borg-Experience-img-Web:hover{
-      filter: drop-shadow(0 0 15px rgb(135, 140, 230));
-      transform: scale(1.05) translate(8%, 28%);
+#WEB-Borg{
+      width: 50%;
+      
 }
-
 
 #Borg-Experience{
+      position: relative;
       display: flex;
       text-align: justify;
       gap: 20px;
@@ -248,8 +190,11 @@ main:hover{
       position: relative;
       display: flex;
       background: linear-gradient(to bottom right, rgb(49, 49, 49), rgb(53, 53, 53), rgb(24, 25, 56));
-      padding: min(3%, 1em);
+      padding: min(2.5%, 2.5em);
       border-radius: 20px;
+      flex-direction: column;
+      justify-content: justify;
+      text-align: center;
 }
 
 @property --angle {
@@ -299,6 +244,7 @@ article{
       transition: all 0.3s ease-in-out;
       box-shadow: 0 0 10px #0f0,
       0 0 15px #0ff;
+      transform: translate(0, 0);
 }
 
 article:hover {
@@ -309,7 +255,7 @@ article:hover {
       0 0 20px #0f0,
       0 0 30px #0ff,
       0 0 15px #0ff;
-}
+} 
 
 #FH-Picture{
       display: flex;
@@ -327,7 +273,8 @@ article:hover {
 }
 
 #FH-Text-Container{
-      display: flex;
+      position: relative;
+      display: inline;
       flex-wrap: wrap;
       justify-content: center;
       background: linear-gradient(to bottom right, rgb(1,1,1), rgb(3, 3, 3), rgb(6, 8, 8));
@@ -339,28 +286,52 @@ article:hover {
       border-radius: 20px;
       width: 50%;
       left: 50%;
-      transform: translateX(50%);
+      transform: translateX(-50%);
       text-align: center;
+      transition: all 0.3s ease-in-out;
+}
+
+#FH-Text-Container:hover, #School-Text-Container:hover {
+      transform: scale(1.02) translate(-51%, -1%);
+      background: linear-gradient(to left, rgb(29,21,150), rgb(1,1,1));
+      box-shadow: 0 0 10px #0f0,
+      0 0 10px #00f,
+      0 0 20px #0f0,
+      0 0 30px #0ff,
+      0 0 15px #0ff;
 }
 
 #Programmierung{
+      position: relative;
       display: flex;
       gap: 2em;
-      animation: bounce 2s;
+      transition: all;
 }
 
-@keyframes bounce{ 
-  0%   { transform: translateY(0); }
-  10%  { transform: translateY(-40px); }
-  20%  { transform: translateY(0); }
-  30%  { transform: translateY(-30px); }
-  40%  { transform: translateY(0); }
-  50%  { transform: translateY(-20px); }
-  60%  { transform: translateY(0); }
-  70%  { transform: translateY(-10px); }
-  80%  { transform: translateY(0); }
-  90%  { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+#Web-img{
+display: flex;
+justify-content: center;
+width: 50%;
+height: 50%;
+translate: 50% -1%;
+}
+
+#FH-Java{
+display: flex;
+justify-content: center;
+width: 50%;
+height: 50%;
+translate: 50% -1%;
+margin-bottom: 1rem;
+}
+
+#DB-FH{
+display: flex;
+justify-content: center;
+width: 60%;
+height: 60%;
+translate: 35% 0;  
+margin-bottom: 0.5rem;
 }
 
 #Datenbank-Basiert, #Programmierungs-Basiert, #Web-Basiert {
@@ -386,10 +357,6 @@ footer{
 
 @media (min-width: 1200px) {
       
-      #CSharp, #Web{
-            transform: scale(0.6) translateY(30%);
-      }
-
       #FH-Picture{
             transform: scale(0.7);
             margin-bottom: -6vw;
@@ -423,6 +390,10 @@ article{
 #Person{
       font-size: 160%;
 }
+
+#Borg-Experience-img-Web{
+      translate: 50% -35%;
+}
 }
 /* Smart Phone */
 @media (max-width: 600px)
@@ -454,6 +425,7 @@ article{
 
       #Borg-Experience{
             text-align: left;
+            flex-direction: column;
       }
 
       footer{
