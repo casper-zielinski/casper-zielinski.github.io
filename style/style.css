@@ -120,6 +120,14 @@ main:hover{
       filter: drop-shadow(0 0 25px rgb(0, 0, 0));
 }
 
+#Borg:hover #Borg-Experience-img-CSharp{
+      filter: drop-shadow(0 0 40px rgba(255, 0, 255, 0.782));
+}
+
+#Borg:hover #Borg-Experience-img-Web{
+      filter: drop-shadow(0 0 40px rgba(0, 0, 255, 0.718));
+}
+
 #School-Picture
 {
       display: flex;
@@ -159,21 +167,20 @@ main:hover{
       display: flex;
       justify-content: center;
       width: 50%;
-      height: 50%;
       translate: 50% -5%;
+      filter: drop-shadow(0 0 30px rgb(161, 11, 191))
 }
 
 #Borg-Experience-img-Web{
       display: flex;
       justify-content: center;
       width: 50%;
-      height: 50%;
       translate: 50% -5%;
+      filter: drop-shadow(0 0 30px rgb(26, 39, 124));
 }
 
 #WEB-Borg{
-      width: 50%;
-      
+      width: 60%;
 }
 
 #Borg-Experience{
@@ -257,6 +264,18 @@ article:hover {
       0 0 15px #0ff;
 } 
 
+article:hover #Web-img{
+      filter: drop-shadow(0 0 40px rgba(0, 0, 255, 0.718));
+}
+
+article:hover #FH-Java{
+      filter: drop-shadow(0 0 60px blue);
+}
+
+article:hover #DB-FH{
+      filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.865));
+}
+
 #FH-Picture{
       display: flex;
       justify-content: center;
@@ -314,6 +333,7 @@ justify-content: center;
 width: 50%;
 height: 50%;
 translate: 50% -1%;
+filter: drop-shadow(0 0 30px rgb(26, 39, 124));
 }
 
 #FH-Java{
@@ -323,6 +343,7 @@ width: 50%;
 height: 50%;
 translate: 50% -1%;
 margin-bottom: 1rem;
+filter: drop-shadow(0 0 30px blue) drop-shadow(0 0 30px rgb(136, 24, 24));
 }
 
 #DB-FH{
@@ -332,6 +353,7 @@ width: 60%;
 height: 60%;
 translate: 35% 0;  
 margin-bottom: 0.5rem;
+filter: drop-shadow(0 0 15px rgba(0, 145, 255, 0.768));
 }
 
 #Datenbank-Basiert, #Programmierungs-Basiert, #Web-Basiert {
@@ -370,13 +392,26 @@ footer{
       }
 }
 
-@media (max-width: 750px){
+@media (max-width: 900px){
 
 #Programmierung{
       flex-direction: column;
-      font-size: large;
       text-align: justify;
       gap: 1em;
+      flex-shrink: 100;
+} 
+
+#Web-img, #FH-Java, #DB-FH{
+      width: 30%;
+      translate: 120% 0;
+}
+
+}
+
+@media (max-width: 750px){
+
+#Borg-Experience-img-Web{
+      transform: translateY(30%);
 }
 
 header{
@@ -478,15 +513,17 @@ article{
 
       article
       {
-            padding: 5.4%;	
-            font-size: min(0.2em, 3vw);
+            padding: 4.4%;	
+            font-size: medium;
       }
 
       article:hover{
             transform: scale(1.015);
       }
 
-     
+      #FH-Picture{
+            margin-bottom: -1.4rem;
+      }
 
       #Web-Basiert, #Programmierungs-Basiert, #Datenbank-Basiert
       {
