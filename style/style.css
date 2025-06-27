@@ -3,7 +3,7 @@
 body{
       background: linear-gradient(to bottom, rgb(1, 2, 11), rgb(5, 8, 28), rgb(13, 15, 13) );
       color: white;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;     
       height: auto;
       width: auto;
       overflow-x: hidden;
@@ -11,7 +11,6 @@ body{
       flex-direction: column;
       justify-content: center;
       overflow-x: hidden;
-
 }
 
 
@@ -413,8 +412,16 @@ input[type="name"]
 
 input[type="email"]
 {
-      width: 22em;
+      position: relative;
+      width: clamp(250px, 70vw, 15em);
       padding: 1%;
+}
+
+textarea[name="message"]
+{
+
+      width: clamp(200px, 70vw, 15em);;
+      resize: vertical;
 }
 
 button[type="submit"]
@@ -604,6 +611,12 @@ article{
       {
             padding: 4.5%;
             text-align: center;
+      }
+
+      input[type="email"]
+      {
+            width: 62vw;
+            transform: translateX(-3vw);
       }
 
 }
